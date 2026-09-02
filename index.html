@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GK Data Analyst</title>
+<meta name="description" content="Gitesh Kumar — MS in Computing graduate and data analyst working across SQL, Python, and Power BI. Portfolio of data cleaning, dashboarding, and analytics projects.">
+<meta property="og:title" content="Gitesh Kumar — Data Analyst Portfolio">
+<meta property="og:description" content="MS in Computing graduate working across SQL, Python, and Power BI — cleaning messy datasets, finding the number that matters, and building dashboards that make findings easy to understand.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gitesh Kumar — Data Analyst Portfolio">
+<meta name="twitter:description" content="MS in Computing graduate working across SQL, Python, and Power BI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -76,13 +83,14 @@
     max-width:1080px; margin:0 auto; padding:16px 28px;
     display:flex; align-items:center; justify-content:space-between;
   }
-  .nav-brand{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px;}
+  .nav-brand{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; text-decoration:none;}
   .nav-brand span{
     background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;
   }
   .nav-links{display:flex; gap:28px; font-size:14.5px; font-weight:500;}
   .nav-links a{text-decoration:none; color:var(--ink-soft); transition:color .15s;}
   .nav-links a:hover{color:var(--violet);}
+  .nav-links a.active{color:var(--violet);}
   .nav-links{display:none;}
   @media(min-width:640px){ .nav-links{display:flex;} }
 
@@ -211,28 +219,34 @@
   .skill-col:nth-child(4) .chip{border-color:color-mix(in srgb, var(--amber) 45%, var(--line));}
 
   /* ---- projects ---- */
-  .proj-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
-  @media(max-width:820px){ .proj-grid{grid-template-columns:1fr;} }
+  .proj-grid{display:grid; grid-template-columns:1fr; gap:36px;}
   .proj-card{
     background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
-    padding:28px; box-shadow:var(--shadow);
-    display:flex; flex-direction:column; height:100%;
+    padding:32px; box-shadow:var(--shadow);
+    display:flex; flex-direction:column;
   }
   .proj-bar{height:5px; border-radius:4px; width:52px; margin-bottom:20px;}
+  .proj-thumb{
+    width:100%; height:auto; max-height:600px;
+    object-fit:contain; background:var(--bg-alt);
+    border-radius:12px; border:1px solid var(--line);
+    margin-bottom:22px; display:block;
+  }
   .proj-card:nth-child(1) .proj-bar{background:linear-gradient(90deg,var(--violet),var(--teal));}
   .proj-card:nth-child(2) .proj-bar{background:linear-gradient(90deg,var(--coral),var(--amber));}
-  .proj-card h3{font-size:20px; font-weight:700; margin-bottom:8px;}
+  .proj-card:nth-child(3) .proj-bar{background:linear-gradient(90deg,var(--teal),var(--amber));}
+  .proj-card h3{font-size:23px; font-weight:700; margin-bottom:8px;}
   .proj-stack{
-    font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--ink-soft);
-    margin-bottom:14px;
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--ink-soft);
+    margin-bottom:16px;
   }
-  .proj-card ul{margin:0 0 20px; padding-left:18px; color:var(--ink-soft); font-size:14.5px;}
-  .proj-card li{margin-bottom:8px;}
+  .proj-card ul{margin:0 0 20px; padding-left:20px; color:var(--ink-soft); font-size:15.5px;}
+  .proj-card li{margin-bottom:9px;}
   .proj-card li strong{color:var(--ink);}
   .proj-link{
-    margin-top:auto;
+    margin-top:4px;
     display:inline-flex; align-items:center; gap:6px;
-    font-weight:600; font-size:14px; text-decoration:none; color:var(--ink);
+    font-weight:600; font-size:15px; text-decoration:none; color:var(--ink);
     padding-top:6px;
   }
   .proj-link:hover{color:var(--violet);}
@@ -303,9 +317,10 @@
 
 <header class="nav">
   <div class="nav-inner">
-    <div class="nav-brand">Gitesh<span>K</span></div>
+    <a href="#" class="nav-brand">Gitesh<span>K</span></a>
     <nav class="nav-links">
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
@@ -346,10 +361,10 @@
           <div class="label">discount threshold linked to losses</div>
         </div>
         <div class="kpi">
-          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg></div>
-          <div class="kpi-tag">Schema_design</div>
-          <div class="num">3NF</div>
-          <div class="label">normalized schema, foreign-key integrity</div>
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div>
+          <div class="kpi-tag">Attrition_driver</div>
+          <div class="num">39.76%</div>
+          <div class="label">Sales Rep. role attrition the real driver behind Sales department number</div>
         </div>
         <div class="kpi kpi-tools">
           <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.66 5.66l-6 6a2 2 0 1 0 2.83 2.83l6-6a4 4 0 0 0 5.66-5.66l-2.12 2.12-2.83-2.83z"/></svg></div>
@@ -392,6 +407,7 @@
         <h3>Data &amp; BI</h3>
         <div class="chip-list">
           <span class="chip">Power BI</span>
+          <span class="chip">DAX</span>
           <span class="chip">Excel</span>
           <span class="chip">MySQL</span>
           <span class="chip">SQLite</span>
@@ -428,26 +444,41 @@
     <div class="proj-grid">
       <div class="proj-card">
         <div class="proj-bar"></div>
+        <img class="proj-thumb" src="superstore.png" alt="Global Superstore Power BI dashboard showing sales and profit by region, year, and discount bucket">
         <h3>Global Superstore Sales &amp; Profitability Analysis</h3>
         <div class="proj-stack">Python · SQL · Power BI · Pandas</div>
         <ul>
-          <li>Cleaned a <strong>51K-row</strong> retail dataset, resolving corrupted date fields and a data-type bug that was silently collapsing discount values.</li>
-          <li>Analyzed regional and discount-driven profitability with SQL and pandas.</li>
-          <li>Built an interactive Power BI dashboard uncovering a <strong>20%+ discount threshold</strong> that flips orders unprofitable.</li>
+          <li>Cleaned a <strong>51K-row</strong> retail dataset, fixing a data-type bug and corrupted date fields.</li>
+          <li>Ranked regional/category profitability using SQL window functions and pandas.</li>
+          <li>Power BI dashboard surfaced a <strong>20%+ discount</strong> threshold linked to unprofitable orders.</li>
         </ul>
         <a class="proj-link" href="https://github.com/Gungn1r-G/Superstore-sales-analysis" target="_blank" rel="noopener">View repository ↗</a>
       </div>
 
       <div class="proj-card">
         <div class="proj-bar"></div>
+        <img class="proj-thumb" src="library.png" alt="Library Management System dashboard showing total books, members, active loans, and recent loan activity">
         <h3>Library Management System</h3>
         <div class="proj-stack">Python · Flask · SQLAlchemy · SQLite</div>
         <ul>
-          <li>Designed a <strong>normalized (3NF)</strong> relational database with 3 tables, enforcing integrity via foreign keys and constraints.</li>
+          <li>Designed a <strong>normalized (3NF)</strong> database with foreign-key constraints across 3 tables.</li>
           <li>Built a full-stack CRUD app with transactional loan logic.</li>
-          <li>Added a SQL-based analytics dashboard on top of the core app.</li>
+          <li>Added a SQL-based analytics dashboard on top of the app.</li>
         </ul>
         <a class="proj-link" href="https://github.com/Gungn1r-G/Library-Management-System" target="_blank" rel="noopener">View repository ↗</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-bar"></div>
+        <img class="proj-thumb" src="dashboard.png" alt="IBM HR Employee Attrition Power BI dashboard showing attrition rate by department, job role, overtime, and tenure">
+        <h3>IBM HR Employee Attrition Analysis</h3>
+        <div class="proj-stack">Excel · MySQL · Power BI · DAX</div>
+        <ul>
+          <li>Analyzed <strong>1,470</strong> HR records via Excel and SQL, checking sample sizes before trusting any rate.</li>
+          <li>Found Sales' attrition was really a <strong>Sales Rep issue (39.76%)</strong>; overtime nearly triples risk.</li>
+          <li>Built a Power BI dashboard with <strong>5 DAX measures</strong> and cross-filtering slicers.</li>
+        </ul>
+        <a class="proj-link" href="https://github.com/Gungn1r-G/IBM-HR-Attrition-Analysis" target="_blank" rel="noopener">View repository ↗</a>
       </div>
     </div>
   </div>
@@ -492,17 +523,17 @@
         </div>
         <h3 style="margin-top:28px;">Certifications</h3>
         <ul class="cert-list">
-          <li><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/NY62NAFFLQBY" target="_blank" rel="noopener">Google — The Bits and Bytes of Computer Networking ↗</a></li>
-          <li><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/QUEJWRJ4V96G" target="_blank" rel="noopener">Stanford Online — Machine Learning ↗</a></li>
-          <li><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/UGU6RJR4W24Y" target="_blank" rel="noopener">University of Michigan — Programming for Everybody (Python) ↗</a></li>
-          <li><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/FE5YSLU54MBF" target="_blank" rel="noopener">University of Michigan — Python Data Structures ↗</a></li>
+          <li><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/NY62NAFFLQBY" target="_blank" rel="noopener">Google - The Bits and Bytes of Computer Networking ↗</a></li>
+          <li><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/QUEJWRJ4V96G" target="_blank" rel="noopener">Stanford Online - Machine Learning ↗</a></li>
+          <li><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/UGU6RJR4W24Y" target="_blank" rel="noopener">University of Michigan - Programming for Everybody (Python) ↗</a></li>
+          <li><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/FE5YSLU54MBF" target="_blank" rel="noopener">University of Michigan - Python Data Structures ↗</a></li>
         </ul>
       </div>
       <div class="info-block">
         <h3>Publication</h3>
         <div class="pub-card">
           <a class="pub-title" href="https://www.technoarete.org/common_abstract/pdf/IJERCSE/v10/i5/Ext_27165.pdf" target="_blank" rel="noopener">Implementation of Diffie-Hellman Algorithm for Information Security ↗</a>
-          IJERCSE — May 2023
+          IJERCSE - May 2023
         </div>
       </div>
     </div>
@@ -525,5 +556,25 @@
   </div>
 </footer>
 
+<script>
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href')));
+  const setActive = () => {
+    let current = sections[0];
+    const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 4;
+    if (atBottom) {
+      current = sections[sections.length - 1];
+    } else {
+      for (const sec of sections) {
+        if (sec && sec.getBoundingClientRect().top <= 120) current = sec;
+      }
+    }
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current.id);
+    });
+  };
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+</script>
 </body>
 </html>
