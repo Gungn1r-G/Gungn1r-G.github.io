@@ -110,7 +110,7 @@
   .hero .lead{margin-top:22px; font-size:18px; color:var(--ink-soft); max-width:52ch; position:relative; z-index:2;}
   .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px; position:relative; z-index:2;}
 
-  .kpi-row{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:64px; position:relative; z-index:2;}
+  .kpi-row{display:grid; grid-template-columns:repeat(5,1fr); gap:18px; margin-top:64px; position:relative; z-index:2;}
   @media(max-width:780px){ .kpi-row{grid-template-columns:1fr 1fr;} }
   .kpi{background:#fff; border:1px solid var(--line); border-radius:14px; padding:22px; position:relative; overflow:hidden;}
   .kpi::before{content:""; position:absolute; inset:0; background:linear-gradient(135deg,var(--pink),var(--violet)); opacity:0; transition:opacity .3s ease;}
@@ -253,8 +253,12 @@
         <div class="num"><span class="counter" data-target="39.76" data-decimals="2" data-suffix="%">0%</span></div>
         <div class="lbl">Sales Rep. attrition the real driver</div>
       </div>
+      <div class="kpi" data-anim="fade-scale">
+        <div class="num"><span class="counter" data-target="79" data-suffix="%">0%</span></div>
+        <div class="lbl">at-risk customers correctly flagged by the churn model</div>
+      </div>
       <div class="kpi kpi-tools" data-anim="fade-scale">
-        <div class="lbl">SQL · Python · Power BI · Pandas</div>
+        <div class="lbl">SQL · Python · Power BI · Scikit-learn</div>
       </div>
     </div>
   </div>
@@ -317,15 +321,15 @@
 
       <div class="proj-card tilt" data-anim="slide-right">
         <div class="proj-tag">Project 02</div>
-        <div class="proj-thumb-wrap"><img class="proj-thumb" src="library.png" alt="Library Management System dashboard showing total books, members, active loans, and recent loan activity"></div>
-        <h3>Library Management System</h3>
-        <div class="proj-stack">Python · Flask · SQLAlchemy · SQLite</div>
+        <div class="proj-thumb-wrap"><img class="proj-thumb" src="churn.png" alt="Customer Churn Risk Power BI dashboard showing churn rate, high-risk customer count, and churn drivers by contract, tenure, and payment method"></div>
+        <h3>Customer Churn Analysis &amp; Prediction</h3>
+        <div class="proj-stack">Python · SQL · Power BI · Scikit-learn</div>
         <ul>
-          <li>Designed a <strong>normalized (3NF)</strong> database with foreign-key constraints across 3 tables.</li>
-          <li>Built a full-stack CRUD app with transactional loan logic.</li>
-          <li>Added a SQL-based analytics dashboard on top of the app.</li>
+          <li>Cleaned a <strong><span class="counter" data-target="7043" data-suffix="-customer">0-customer</span></strong> telecom dataset, fixing a text-encoded currency field and inconsistent categorical encoding.</li>
+          <li>Found month-to-month contracts churn at <strong><span class="counter" data-target="42" data-suffix=".7%">0.7%</span></strong> vs. 2.8% for two-year contracts using SQL.</li>
+          <li>Built a logistic regression model to predict individual churn risk (<strong>AUC 0.835</strong>, 79% recall) with a Power BI risk-tier dashboard.</li>
         </ul>
-        <a class="proj-link" href="https://github.com/Gungn1r-G/Library-Management-System" target="_blank" rel="noopener">View repository</a>
+        <a class="proj-link" href="https://github.com/Gungn1r-G/Customer-Churn-Prediction" target="_blank" rel="noopener">View repository</a>
       </div>
 
       <div class="proj-card tilt" data-anim="slide-left">
@@ -358,8 +362,10 @@
         <h3>Junior Unity Developer</h3>
         <div class="org">IXR Labs, Jaipur, India</div>
         <ul>
-          <li>Developed and tested application features using Unity and C#, implementing gameplay/UI systems with structured debugging throughout iterative development.</li>
-          <li>Collaborated with team members using Git/GitHub to manage code changes and support application development.</li>
+          <li>Developed and maintained gameplay systems, user interface components, and interactive features using Unity and C#, supporting the delivery of functional application prototypes.</li>
+          <li>Tested application features, identified defects, and performed structured debugging to diagnose and resolve gameplay, UI, and functionality issues.</li>
+          <li>Built and refined XR/interactive prototypes through iterative development, incorporating testing feedback to improve usability, stability, and overall user experience.</li>
+          <li>Collaborated with developers and team members using Git/GitHub for version control and coordinated development, supporting application quality through iterative troubleshooting cycles prior to internal releases.</li>
         </ul>
       </div>
     </div>
